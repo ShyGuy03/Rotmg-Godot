@@ -170,10 +170,17 @@ animation = &"shoot_up"
 autoplay = "idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1075695804]
-position = Vector2(1, -4)
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_vgqql")
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="." unique_id=741753303]
 stream = ExtResource("3_6t5aa")
 
+[node name="FireRateTimer" type="Timer" parent="." unique_id=1305828816]
+one_shot = true
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=864842607]
+position = Vector2(0, -4)
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="FireRateTimer" to="." method="_on_fire_rate_timer_timeout"]

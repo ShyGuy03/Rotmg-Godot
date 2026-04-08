@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bonde1jwikw5u"]
+
+[ext_resource type="Script" uid="uid://cvywht1gj60m4" path="res://Scenes/bullet.gd" id="1_14k46"]
+[ext_resource type="Texture2D" uid="uid://bhgi2i5yi0so" path="res://Assets/arrow.png" id="1_vlxeq"]
+
+[node name="Area2D" type="Area2D" unique_id=1091457493]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_14k46")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=983019079]
+position = Vector2(-3.5, 3.5)
+texture = ExtResource("1_vlxeq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=776395970]
+
+[node name="LifetimeTimer" type="Timer" parent="." unique_id=2006752763]
+wait_time = 0.135
